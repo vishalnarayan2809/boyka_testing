@@ -1,0 +1,36 @@
+{
+  "listeners_package": "io.github.boykaframework.testng.listeners",
+  "logging": {
+    "logs_folder": "./logs",
+    "console_logs": true
+  },
+  "ui": {
+    "timeout": {
+      "implicit_wait": 10,
+      "explicit_wait": 30,
+      "page_load_timeout": 30,
+      "script_timeout": 10,
+      "highlight_delay": 100
+    },
+    "screenshot": {
+      "enabled": true,
+      "path": "./screenshots",
+      "extension": "jpeg",
+      "prefix": "SCR"
+    },
+    "web": {
+      "test_web": {
+        "base_url": "https://www.saucedemo.com",
+        "browser": "CHROME",
+        "headless": false,
+  "highlight": false,
+        "resize": "MAXIMIZED",
+        "browser_options": [
+          "--disable-blink-features=AutomationControlled",
+          "--disable-web-security",
+          "--no-sandbox"
+        ]
+      }
+    }
+  }
+}

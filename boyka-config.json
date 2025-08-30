@@ -1,0 +1,55 @@
+{
+  "web": {
+    "test_web": {
+      "browser": "chrome",
+      "runType": "local",
+      "headless": false,
+      "baseUrl": "https://www.saucedemo.com",
+      "timeout": {
+        "implicitWait": 10,
+        "explicitWait": 20,
+        "pageLoadTimeout": 30,
+        "scriptTimeout": 10
+      },
+      "resize": "MAXIMIZE",
+      "screenshot": {
+        "onFailure": true,
+        "onSuccess": false,
+        "path": "./screenshots",
+        "extension": "PNG"
+      },
+      "highlight": false,
+      "customDriverOptions": {
+        "chromeOptions": [
+          "--disable-blink-features=AutomationControlled",
+          "--no-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-notifications",
+          "--disable-popup-blocking",
+          "--disable-save-password-bubble",
+          "--disable-password-manager-reauthentication",
+          "--password-store=basic"
+        ],
+        "chromePreferences": {
+          "profile.default_content_setting_values.notifications": 2,
+          "profile.default_content_settings.popups": 0,
+          "profile.managed_default_content_settings.notifications": 2,
+          "profile.password_manager_enabled": false,
+          "credentials_enable_service": false,
+          "password_manager_enabled": false,
+          "profile.password_manager_leak_detection_enabled": false,
+          "autofill.profile_enabled": false,
+          "autofill.credit_card_enabled": false,
+          "safebrowsing.enabled": false,
+          "safebrowsing.disable_download_protection": true,
+          "profile.default_content_setting_values.geolocation": 2
+        }
+      }
+    }
+  },
+  "logging": {
+    "enable": true,
+    "level": "INFO",
+    "path": "./logs"
+  }
+}
