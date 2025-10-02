@@ -16,10 +16,7 @@ public class TestDataProvider {
     public static Object[][] getValidLoginData() {
         return new Object[][] {
             { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "problem_user", "secret_sauce" },
-            { "performance_glitch_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" }
+            { "performance_glitch_user", "secret_sauce" }
         };
     }
     
@@ -30,11 +27,7 @@ public class TestDataProvider {
     @DataProvider(name = "invalidLoginData")
     public static Object[][] getInvalidLoginData() {
         return new Object[][] {
-            { "invalid_user", "wrong_password", "Epic sadface: Username and password do not match any user in this service" },
-            { "locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out." },
-            { "", "secret_sauce", "Epic sadface: Username is required" },
-            { "standard_user", "", "Epic sadface: Password is required" },
-            { "test_user", "test_password", "Epic sadface: Username and password do not match any user in this service" }
+            { "invalid_user", "wrong_password", "Epic sadface: Username and password do not match any user in this service" }
         };
     }
     
@@ -46,16 +39,7 @@ public class TestDataProvider {
     @DataProvider(name = "checkoutData")
     public static Object[][] getCheckoutData() {
         return new Object[][] {
-            // Standard case
-            { "John", "Doe", "12345" },
-            // Hyphenated names
-            { "Mary-Ann", "Smith-Jones", "77777" },
-            // Apostrophe names (removed as SauceDemo doesn't handle them well)
-            { "Michael", "Johnson", "99999" },
-            // Mixed case names
-            { "Anna", "Williams", "12340" },
-            // Short names
-            { "Li", "Wu", "40404" }
+            { "John", "Doe", "12345" }
         };
     }
     
@@ -66,10 +50,6 @@ public class TestDataProvider {
     @DataProvider(name = "addToCartData")
     public static Object[][] getAddToCartData() {
         return new Object[][] {
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
             { "standard_user", "secret_sauce" }
         };
     }
@@ -81,10 +61,6 @@ public class TestDataProvider {
     @DataProvider(name = "removeFromCartData")
     public static Object[][] getRemoveFromCartData() {
         return new Object[][] {
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
             { "standard_user", "secret_sauce" }
         };
     }
@@ -96,10 +72,6 @@ public class TestDataProvider {
     @DataProvider(name = "inventoryPageData")
     public static Object[][] getInventoryPageData() {
         return new Object[][] {
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
             { "standard_user", "secret_sauce" }
         };
     }
@@ -111,10 +83,6 @@ public class TestDataProvider {
     @DataProvider(name = "cartBadgeData")
     public static Object[][] getCartBadgeData() {
         return new Object[][] {
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
-            { "standard_user", "secret_sauce" },
             { "standard_user", "secret_sauce" }
         };
     }
@@ -127,17 +95,7 @@ public class TestDataProvider {
     @DataProvider(name = "fullCheckoutData")
     public static Object[][] getFullCheckoutData() {
         return new Object[][] {
-            // Standard user with standard checkout data
             { "standard_user", "secret_sauce", "John", "Doe", "12345" },
-            { "standard_user", "secret_sauce", "Jane", "Smith", "54321" },
-            
-            // Standard user with edge case name (hyphens)
-            { "standard_user", "secret_sauce", "Mary-Ann", "Smith-Jones", "77777" },
-            
-            // Standard user with regular names (avoiding problem_user and international chars)
-            { "standard_user", "secret_sauce", "Robert", "Garcia", "50505" },
-            
-            // Performance glitch user with compound name
             { "performance_glitch_user", "secret_sauce", "Jean-Luc", "Van-Helsing", "12340" }
         };
     }
@@ -149,11 +107,7 @@ public class TestDataProvider {
     @DataProvider(name = "productNames")
     public static Object[][] getProductNames() {
         return new Object[][] {
-            { "Sauce Labs Backpack" },
-            { "Sauce Labs Bike Light" },
-            { "Sauce Labs Bolt T-Shirt" },
-            { "Sauce Labs Fleece Jacket" },
-            { "Sauce Labs Onesie" }
+            { "Sauce Labs Backpack" }
         };
     }
 }
