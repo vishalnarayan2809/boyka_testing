@@ -23,13 +23,25 @@
         "base_url": "https://www.saucedemo.com",
         "browser": "CHROME",
         "headless": false,
-  "highlight": false,
+        "highlight": false,
         "resize": "MAXIMIZED",
         "browser_options": [
           "--disable-blink-features=AutomationControlled",
           "--disable-web-security",
-          "--no-sandbox"
-        ]
+          "--no-sandbox",
+          "--disable-features=PasswordLeakDetection",
+          "--disable-features=PasswordManager",
+          "--disable-features=AutofillPasswordGeneration",
+          "--disable-password-manager-reauthentication",
+          "--disable-save-password-bubble",
+          "--incognito"
+        ],
+        "browser_prefs": {
+          "credentials_enable_service": false,
+          "profile.password_manager_enabled": false,
+          "profile.password_manager_leak_detection": false,
+          "autofill.profile_enabled": false
+        }
       }
     }
   }
